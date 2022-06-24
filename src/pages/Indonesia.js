@@ -1,18 +1,17 @@
 
-import Hero from "../components/Hero/Hero.js";
-import Content from "../components/Content/Content.js";
-import Dashboard from "../components/Dashboard/Dashboard.js";
+import Content from "../components/Content/Content";
+import Dashboard from "../components/Dashboard/Dashboard";
+import Hero from "../components/Hero/Hero";
 import { useDispatch } from "react-redux/es/exports.js";
 import { useEffect } from "react";
 
 import axios from "axios";
 import { update_global_covid } from "../features/dataSlice.js";
 import { update_dashboard_url } from "../features/dataSlice.js";
-
-function Main() {
+function Indonesia(){
   const disfecth = useDispatch();
   useEffect(async() => {
-    const res = await axios("https://covid19.mathdro.id/api");
+    const res = await axios("https://covid19.mathdro.id/api/countries/indonesia");
     // console.log(res.data);
     const dataCovid = [
       {
@@ -29,23 +28,15 @@ function Main() {
       },
     ]
     disfecth(update_global_covid(dataCovid))
-    disfecth(update_dashboard_url(res.data.image))
+    disfecth(update_dashboard_url("https://covid19.mathdro.id/api/countries/indonesia/og"))
   }, []);
   return (
-    <main>
-      <Hero />
-      <Content title="Global"/>
-      <Dashboard title="Global"/>
-    </main>
-  );
-}
-
-function Home() {
-  return (
     <>
-      <Main />
+      <Hero />
+      <Content title="Indonesia"/>
+      <Dashboard title="Indonesia"/>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Indonesia;

@@ -1,5 +1,6 @@
 import style from "./Hero.module.css";
 import poster from "../../image/undraw_medical_research.png";
+import Button from "../ui/Button";
 
 function Hero() {
     return (
@@ -11,7 +12,7 @@ function Hero() {
                     <p className={style.hero__description}>
                         Ini adalah aplikasi untuk memonitoring kasus COVID-19, aplikasi ini dapat memantau perkembangan kasus covid didunia, dan juga di indonesia
                     </p>
-                    <button className={style.hero__button}>Vaccine</button>
+                    <Button variant="primary">Vaccine</Button>
                 </div>
                 <div className={style.hero__rigth}>
 

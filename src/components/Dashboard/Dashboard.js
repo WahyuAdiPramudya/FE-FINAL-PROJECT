@@ -1,20 +1,20 @@
 import style from "./Dashboard.module.css";
-import poster from "../../image/undraw_medical_care_movn.png";
+import {useSelector} from "react-redux"
 
-function Dashboard() {
+function Dashboard({title}) {
+  const imageDashboard = useSelector((store)=>store.covid_data_reducers.dashboard_url)
     return (
-      <div>
+    <>
       <div className={style.container}>
         <section className={style.contents}>
           <h2 className={style.contents__title}>Dashboard</h2>
-          <h4 className={style.contents__description}>Dashboard Data Global</h4>
+          <h4 className={style.contents__description}>Dashboard Data {title}</h4>
           <div className={style.contents__container}>
-          <img className={style.hero__image} src={poster} alt="placeholder"/>
+          <img className={style.hero__image} src={imageDashboard} alt="placeholder"/>
           </div>
         </section>
       </div>
-    </div>
-      
+    </>
     )
 }
 

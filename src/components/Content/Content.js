@@ -1,32 +1,25 @@
 import style from "./Content.module.css";
+// import data from "../../utils/constants/indonesia";
+import {useSelector} from "react-redux";
+import Card from "../Card/Card";
 
-function Content() {
+function Content({title}) {
+    const dataList = useSelector((store)=>store.covid_data_reducers.global_covid)
+    // console.log(dataList);
+
     return (
-      <div>
-      <div className={style.container}>
-        <section className={style.contents}>
-          <h2 className={style.contents__title}>Global</h2>
-          <h4 className={style.contents__description}>Data COVID Berdasarkan Global</h4>
-          <div className={style.contents__container}>
-            <div className={style.content}>
-              <h3 className={style.content__status}>Confirmed</h3>
-              <h4 className={style.content__count}>1000</h4>
-              {/* <h4 className={style.content__title}>More Info</h4> */}
+    <div>
+        <div className={style.container}>
+          <section className={style.contents}>
+            <h2 className={style.contents__title}>{title}</h2>
+            <h4 className={style.contents__description}>Data COVID Berdasarkan {title}</h4>
+            <div className={style.contents__container}>
+              {dataList.map((data,idx) => {
+                return <Card key={idx} card={data} />;
+              })}
             </div>
-            <div className={style.content}>
-              <h3 className={style.content__status}>Death</h3>
-              <h4 className={style.content__count}>1000</h4>
-              {/* <h4 className={style.content__title}>More Info</h4> */}
-            </div>
-            <div className={style.content}>
-              <h3 className={style.content__status}>Recovered</h3>
-              <h4 className={style.content__count}>1000</h4>
-              {/* <h4 className={style.content__title}>More Info</h4> */}
-            </div>
-            
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
     </div>
       
     )

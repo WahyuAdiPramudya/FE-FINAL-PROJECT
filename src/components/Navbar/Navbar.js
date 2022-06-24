@@ -1,4 +1,5 @@
 import style from "./Navbar.module.css";
+import {Link} from "react-router-dom";
 function Navbar(){
     return (
         <div className={style.container}>
@@ -6,12 +7,12 @@ function Navbar(){
                 <div>
                     <h1 className={style.navbar__title}>Covid ID</h1>
                 </div>
-                <div>
+                <div>                    
                     <ul className={style.navbar__list}>
-                        <li className={style.navbar__item}>Global</li>
-                        <li className={style.navbar__item}>Indonesia</li>
-                        <li className={style.navbar__item}>Provinsi</li>
-                        <li className={style.navbar__item}>About</li>
+                        <li className={style.navbar__item}><Link to="/">Home</Link></li>
+                        <li className={style.navbar__item}><Link to="/indonesia">Indonesia</Link></li>
+                        <li className={style.navbar__item}><Link to="/provinsi">Provinsi</Link></li>
+                        <li className={style.navbar__item}><Link to="/about">About</Link></li>
                     </ul>
                 </div>
             </nav>
