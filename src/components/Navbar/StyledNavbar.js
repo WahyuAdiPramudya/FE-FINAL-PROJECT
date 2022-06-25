@@ -6,24 +6,10 @@ const StyledNavbar = styled.div`
     padding: 1rem;
     color: #fff;
 
-span{
-  background: white;
-  width: 25px;
-  height: 3px;
-  display: block;
-}
-
-span:not(:last-child){
-  margin-bottom: 5px;
-}
 .container__menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navbar__menu{
-    display:none
 }
 
 .navbar__title {
@@ -32,6 +18,7 @@ span:not(:last-child){
 
 .navbar__list {
   list-style: none;
+  padding-left: 0;
 }
 
 .navbar__item {

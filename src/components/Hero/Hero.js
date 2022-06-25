@@ -14,7 +14,7 @@ function Hero() {
                     </p>
                     <Button variant="primary">Vaccine</Button>
                 </div>
-                <div className="hero__rigth">
+                <div className="hero__right">
 
                     <img className="hero__image" src={poster} alt="placeholder"/>
                 </div>

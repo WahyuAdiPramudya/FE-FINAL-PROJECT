@@ -1,6 +1,8 @@
+import Hero from "../components/Hero/Hero";
+
 function About(){
   return (
-    <h2>Hello About</h2>
+    <Hero />
   )
 }
 

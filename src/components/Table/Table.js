@@ -1,15 +1,15 @@
-import style from "./Table.module.css";
+// import style from "./Table.module.css";
 import {useSelector} from "react-redux";
+import StyledTable from "./StyledTable";
 function Table(){
     const provinces = useSelector((store)=>store.covid_data_reducers.covid_provinsi)
-    // console.log(provinces);
     return (
-        <div>
-            <div className={style.container}>
-            <section className={style.contents}>
-                <h2 className={style.contents__title}>Provinsi</h2>
-                <h4 className={style.contents__description}>Data COVID Berdasarkan Provinsi</h4>
-                <div className={style.contents__container}>
+        <StyledTable>
+            <div className="container">
+            <section className="contents">
+                <h2 className="table__title">Provinsi</h2>
+                <h4 className="table__description">Data COVID Berdasarkan Provinsi</h4>
+                <div className="table__container">
                     <table>
                         <thead>
                             <tr>
@@ -40,7 +40,7 @@ function Table(){
                 </div>
             </section>
             </div>
-        </div>
+        </StyledTable>
     );
 }
 

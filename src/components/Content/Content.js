@@ -6,7 +6,6 @@ import StyledContent from "./StyledContent";
 
 function Content({title}) {
     const dataList = useSelector((store)=>store.covid_data_reducers.global_covid)
-    // console.log(dataList);
 
     return (
     <StyledContent>

@@ -13,7 +13,6 @@ function Main() {
   const dispacth = useDispatch();
   useEffect(async() => {
     const res = await axios("https://covid19.mathdro.id/api");
-    // console.log(res.data);
     const dataCovid = [
       {
         status:"Positif",

@@ -11,7 +11,11 @@ const StyledHero = styled.div`
 }
 
 .hero__left {
+  order:1;
   margin-bottom: 1rem;
+}
+.hero__right {
+  /* order:1; */
 }
 
 .hero__title {
@@ -54,6 +58,10 @@ const StyledHero = styled.div`
     margin: 3rem auto;
   }
 
+.hero__left {
+  order:0;
+}
+
   .hero {
     margin: 0 1rem;
     flex-direction: row;
@@ -63,12 +71,16 @@ const StyledHero = styled.div`
   }
 
   .hero__left {
-    flex-basis: 40%;
+    flex-basis: 55%;
   }
 
   .hero__right {
-    flex-basis: 60%;
+    flex-basis: 40%;
   }
+
+  .hero {
+    padding: 0 5rem;
+}
 }
 `;
 

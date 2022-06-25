@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-    max-width: 100%;
-    height: auto;
-    margin-right: 5%;
+    width: 280px;
+    height: 180px;
     background: #FFFFFF;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -30,14 +29,16 @@ h2 {
     color: #00B0FF
 }
 
+
+
 /* medium screen */
 @media (min-width: 768px) {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 }
 
 /* Large Screen */
 @media (min-width: 992px) {
-    flex-basis: 25%;
+    /* flex-basis: 25%; */
     padding: 1rem;
 }
 `;

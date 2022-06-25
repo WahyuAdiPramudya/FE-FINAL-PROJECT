@@ -12,7 +12,6 @@ function Indonesia(){
   const disfecth = useDispatch();
   useEffect(async() => {
     const res = await axios("https://covid19.mathdro.id/api/countries/indonesia");
-    // console.log(res.data);
     const dataCovid = [
       {
         status:"Positif",

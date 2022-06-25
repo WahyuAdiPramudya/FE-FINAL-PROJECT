@@ -7,7 +7,6 @@ import StyledForm from "./StyledForm";
 
 function AddFormData(){
     const provinces =  useSelector((store)=> store.covid_data_reducers.covid_provinsi)
-    // console.log(provinces);
     const dispatch = useDispatch()
     const [formData, setFormData] = useState({
         province: provinces[0].kota,
@@ -81,10 +80,10 @@ function AddFormData(){
                      src={poster} alt="placeholder"></img>
                 </div>
                 <div className="addformdata__right">
-                    <h2 className="addformdata__title_form">Form Data Covid</h2>
+                    <h2 className="addformdata__title_form form_title">Form Data Covid</h2>
                     <div>
-                        <form onSubmit={handleSubmit}>
-                            <label className="addformdata__add_form">Provinsi</label>
+                        <form onSubmit={handleSubmit} className="addform">
+                                <label className="addformdata__add_form_provinsi">Provinsi</label>
                                 <select value={province} onChange={updateProvince} className="addformdata__select">
                                 {provinces.map((item, idx) => {
                                     return ( 

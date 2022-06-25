@@ -6,8 +6,11 @@ const StyledForm = styled.div`
 
 .addformdata {
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  flex-direction: column
+}
+
+.form_title{
+  text-align:center;
 }
 
 .addformdata__left {
@@ -21,6 +24,43 @@ const StyledForm = styled.div`
 }
 
 input[type="text"] {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: flex;
+  flex-direction: column;
+}
+
+.addformdata__image {
+  max-width: 70%;
+  height: 40%;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+@media (min-width: 768pxpx) {
+
+  input[type="text"] {
   width: 70%;
   margin: 0 auto;
   padding: 8px;
@@ -48,14 +88,6 @@ select {
   flex-direction: column;
 }
 
-.addformdata__image {
-  max-width: 70%;
-  height: 40%;
-  margin: 0 auto;
-  border-radius: 25px;
-}
-
-@media (min-width: 768pxpx) {
   .container {
     max-width: 100%;
     margin: 3rem auto;
@@ -65,29 +97,16 @@ select {
     color: crimson;
     margin-bottom: 1rem;
     font-size: 1.4rem;
-    text-align: center;
   }
 
   label.addformdata__add_form_title {
     display: block;
-    text-align: center;
     line-height: 150%;
     font-size: 1.2em;
   }
 
-  label.addformdata__add_form_date {
-    display: block;
-    text-align: center;
-    line-height: 150%;
-    font-size: 1.2em;
-  }
-
-  .addformdata {
-    margin: 0 1rem;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
+  h2 {
+    text-align:center;
   }
 
   .addformdata__left {
@@ -96,6 +115,9 @@ select {
 
   .addformdata__right {
     flex-basis: 40%;
+  }
+
+  .addform label{
   }
 }
 
@@ -111,19 +133,16 @@ select {
     color: crimson;
     margin-bottom: 1rem;
     font-size: 1.4rem;
-    text-align: center;
   }
 
   label.addformdata__add_form_title {
     display: block;
-    text-align: center;
     line-height: 150%;
     font-size: 1.2em;
   }
 
   label.addformdata__add_form_date {
     display: block;
-    text-align: center;
     line-height: 150%;
     font-size: 1.2em;
   }
@@ -133,7 +152,6 @@ select {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
   }
 
   .addformdata__left {
