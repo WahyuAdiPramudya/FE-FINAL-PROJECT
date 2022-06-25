@@ -1,9 +1,10 @@
-/* Small Screen */
-.container {
-  background-color: #00B0FF;
-  padding: 1rem;
-  color: #fff;
-}
+import styled from "styled-components";
+
+const StyledNavbar = styled.div`
+    /* Small Screen */
+    background-color: #00B0FF;
+    padding: 1rem;
+    color: #fff;
 
 span{
   background: white;
@@ -21,6 +22,10 @@ span:not(:last-child){
   align-items: center;
 }
 
+.navbar__menu{
+    display:none
+}
+
 .navbar__title {
   margin-bottom: 1rem;
 }
@@ -35,8 +40,7 @@ span:not(:last-child){
 
 /* Medium Screen */
 @media (min-width: 768px) {
-  
-  .container__menu{
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,4 +57,29 @@ span:not(:last-child){
   .navbar__item {
     margin: 0 1rem;
   }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span{
+  background: white;
+  width: 25px;
+  height: 3px;
+  display: block;
 }
+
+span:not(:last-child){
+  margin-bottom: 5px;
+}
+.container__menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+}
+`;
+
+export default StyledNavbar

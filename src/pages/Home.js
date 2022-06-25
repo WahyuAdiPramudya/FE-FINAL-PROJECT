@@ -10,7 +10,7 @@ import { update_global_covid } from "../features/dataSlice.js";
 import { update_dashboard_url } from "../features/dataSlice.js";
 
 function Main() {
-  const disfecth = useDispatch();
+  const dispacth = useDispatch();
   useEffect(async() => {
     const res = await axios("https://covid19.mathdro.id/api");
     // console.log(res.data);
@@ -28,8 +28,8 @@ function Main() {
         ...res.data.recovered
       },
     ]
-    disfecth(update_global_covid(dataCovid))
-    disfecth(update_dashboard_url(res.data.image))
+    dispacth(update_global_covid(dataCovid))
+    dispacth(update_dashboard_url(res.data.image))
   }, []);
   return (
     <main>

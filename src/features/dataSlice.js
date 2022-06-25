@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../utils/constants/provinces"
+import data from "../utils/constants/provinces";
 const dataSlice = createSlice({
     name:"Covid Slice",
     initialState: {

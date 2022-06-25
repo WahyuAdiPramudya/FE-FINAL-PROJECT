@@ -25,7 +25,7 @@ function Table(){
                             {provinces.map((data,idx) => {
                                 // console.log(data);
                                 return (
-                                    <tr>
+                                    <tr key={idx}>
                                         <td>{idx+1}</td>
                                         <td>{data.kota}</td>
                                         <td>{data.kasus}</td>

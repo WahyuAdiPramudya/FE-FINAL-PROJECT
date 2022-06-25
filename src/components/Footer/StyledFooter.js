@@ -1,14 +1,19 @@
-/* Small Screen */
-.container {
+import styled from "styled-components";
+
+const StyledFooter = styled.div`
+    /* Small Screen */
     background-color: #00B0FF;
     color: #fff;
     padding: 1rem;
     text-align: center;
     display: flex;
-  }
 
   .navbar__title {
     margin-bottom: 1rem;
+  }
+
+  .footer{
+    display: flex;
   }
   
   .navbar__list {
@@ -29,16 +34,13 @@
   
   /* Medium Screen */
   @media (min-width: 768px) {
-    /*
-     * Nothing TODO here.
-     * We dont change styling footer. 
-     */
+    
   }
   
   /* Large Screen */
   @media (min-width: 992px) {
-    /*
-     * Nothing TODO here.
-     * We dont change styling footer. 
-     */
+    
   }
+`;
+
+export default StyledFooter;
